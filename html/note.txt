@@ -1,0 +1,32 @@
+ Online Shopping Product Page
+
+Create a product webpage.
+
+Requirements:
+
+Product Name (<h1>)
+Product Description (paragraph)
+Original Price using <del>
+Discounted Price using <ins>
+Highlight "Limited Time Offer"
+Important feature using <strong>
+Brand name using <b>
+[15:12, 13/8/2026] +91 94748 30747: Resume Webpage
+
+Create your resume using HTML.
+
+Include:
+
+* Name
+* Education
+* Skills
+* Career Objective
+* Experience (if any)
+
+Formatting:
+
+* Name should be bold.
+* Career Objective should be italic.
+* Important skills should use <strong>.
+* Highlight your strongest skill.
+* Email should be underlined.

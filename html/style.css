@@ -1,0 +1,8 @@
+body{
+    font-family: sans-serif;
+    /* Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined: */
+}
+span{
+    font:bold;
+    color: green;
+}

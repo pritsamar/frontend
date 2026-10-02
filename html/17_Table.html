@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Project Management Dashboard</h1>
+    <table border="1">
+      <caption>
+        Team Project OverView
+      </caption>
+      <tr>
+        <th rowspan="3">Project ID</th>
+        <th rowspan="3">Project Name</th>
+        <th colspan="6">Team Composition</th>
+        <th colspan="4">TimeLine</th>
+        <th rowspan="3">Status</th>
+        <th rowspan="3">Remarks</th>
+      </tr>
+      <!-- row 2 -->
+      <tr>
+        <th colspan="2">Frontend</th>
+        <th colspan="2">Backend</th>
+        <th colspan="2">QA</th>
+        <th rowspan="2">Start</th>
+        <th rowspan="2">end</th>
+        <th colspan="2">Milestones</th>
+      </tr>
+
+      <!-- row 3 -->
+      <tr>
+        <th>Name</th>
+        <th>ExP</th>
+        <th>Name</th>
+        <th>Exp</th>
+        <th>Name</th>
+        <th>Exp</th>
+        <th>Phase 1</th>
+        <th>Phase 2</th>
+      </tr>
+      <!-- row  4 -->
+      <tr>
+        <td>PJ101</td>
+        <td>Health Tracker</td>
+        <td>Alice</td>
+        <td>3y</td>
+        <td>Bob</td>
+        <td>5y</td>
+        <td>Eva</td>
+        <td>2y</td>
+        <td>01-jan</td>
+        <td>30-Mar</td>
+        <td>10-Jan</td>
+        <td>15-Mar</td>
+        <td><mark>Active</mark></td>
+        <td>
+          <ul>
+            <li>Delay in Backend API</li>
+            <li>UI completed</li>
+          </ul>
+        </td>
+      </tr>
+      <!-- row 5 -->
+      <tr>
+        <td rowspan="2">PJ102</td>
+        <td rowspan="2">E-Commerce</td>
+        <td>Rahul</td>
+        <td>4y</td>
+        <td>Meera</td>
+        <td>6y</td>
+        <td colspan="2" rowspan="2">Shared QA:<br /><b>Sam(5y)</b></td>
+        <td rowspan="2">10-Feb</td>
+        <td rowspan="2">20-Apr</td>
+        <td>20-Feb</td>
+        <td>15-Mar</td>
+        <td rowspan="2">On Hold</td>
+        <td rowspan="2">
+          <ol>
+            <li>Pending client feedBack</li>
+            <li>Phase 2 delayed</li>
+          </ol>
+        </td>
+      </tr>
+
+      <!-- row 6 -->
+      <tr>
+        <td>Sneha</td>
+        <td>2y</td>
+        <td>Ali</td>
+        <td>4y</td>
+        <td>05-Mar</td>
+        <td>--</td>
+      </tr>
+
+      <!-- row 7 -->
+      <tr>
+        <td>Pj103</td>
+        <td>Survey App</td>
+        <td colspan="2">
+          <ul type="circle">
+            <li>Kavya(2y)</li>
+            <li>Ravi(1y)</li>
+          </ul>
+        </td>
+        <td colspan="2">--</td>
+        <td colspan="2">QA:N/A</td>
+        <td>01-Mar</td>
+        <td>01-may</td>
+        <td colspan="2">
+          <ul type="A">
+            <li>UX Approval</li>
+            <li>Data Sync</li>
+          </ul>
+        </td>
+        <td>Planned</td>
+        <td>
+          <ul>
+            <li>No Backend</li>
+            <li>Only frontEnd POC</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
