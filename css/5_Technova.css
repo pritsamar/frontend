@@ -1,0 +1,90 @@
+body{
+    background-color: #11152A;
+    height: 100vh;
+}
+
+
+
+nav{
+    border: solid #695CF2 ;
+    background-color: #161B34;
+    text-align: center;
+    width: 80%;
+    
+}
+
+nav h1{
+    
+    color: whitesmoke;
+
+}
+nav p{
+    color: #8C8DBE;
+    
+}
+
+header{
+    border: solid cyan;
+    color: cyan;
+    text-align: center;
+     width: 80%;
+
+}
+
+main{
+     width: 80%;
+     height: 400px;
+     overflow: scroll;
+}
+a{
+    text-decoration: none;
+    color:cyan
+}
+
+section{
+    border:#695CF2 solid;
+    background-color:#171E3D;
+    color: snow;
+}
+
+section h2{
+    color: cyan;
+}
+section div{
+
+    border:  2px 0px;
+    border-style: solid;
+    border-color:  #3F4568;
+    background-color: #222848;
+    width: 90%;
+}
+section p{
+    color: #8C8DBE;
+}
+
+.know{
+    background-color: #29233A;
+    border-color: #dd9507;
+    color: #F4CD6F;
+    text-align: center;
+    width: 95%;
+}
+.know p{
+    color: #F4CD6F; 
+}
+
+.last{
+    border-color: cyan;
+    text-align: center;
+    margin-left: 5%;
+}
+
+footer{
+    border: solid #695CF2 ;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    color:#8C8DBE;
+}

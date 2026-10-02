@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Spread Animation</title>
+    <style>
+      body {
+        background-color: #121212;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-container {
+        position: relative;
+        width: 200px; /* Adjust according to your card image width */
+        height: 300px; /* Adjust according to your card image height */
+      }
+
+      .card-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        /* Set transform origin to bottom center so cards fan out like a hand */
+        transform-origin: bottom center;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        cursor: pointer;
+        border-radius: 8px; /* Optional rounded corners */
+      }
+
+      /* Initial stacking order */
+      .ace1 {
+        z-index: 4;
+      }
+      .ace2 {
+        z-index: 3;
+      }
+      .ace3 {
+        z-index: 2;
+      }
+      .ace4 {
+        z-index: 1;
+      }
+
+      /* Fan out smoothly when hovering over the container */
+      .card-container:hover .ace1 {
+        transform: rotate(-30deg) translateX(-30px);
+      }
+
+      .card-container:hover .ace2 {
+        transform: rotate(-10deg) translateX(-10px);
+      }
+
+      .card-container:hover .ace3 {
+        transform: rotate(10deg) translateX(10px);
+      }
+
+      .card-container:hover .ace4 {
+        transform: rotate(30deg) translateX(30px);
+      }
+
+      /* Optional: highlight card when hovered individually */
+      .card-container img:hover {
+        z-index: 10;
+        transform: scale(1.08) translateY(-15px) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card-container">
+      <img class="ace1" src="img/ace1.png" alt="Ace 1" />
+      <img class="ace2" src="img/ace2.png" alt="Ace 2" />
+      <img class="ace3" src="img/ace3.png" alt="Ace 3" />
+      <img class="ace4" src="img/ace4.png" alt="Ace 4" />
+    </div>
+  </body>
+</html>

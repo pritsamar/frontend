@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+     text-align: center;
+}
+
+span{
+    font-family: 'Lucida Sans';
+    font-size: 300px;
+    margin-top: 2000px;
+    
+   
+}
+
+h1{
+    margin-top: 10%;
+}
+
+.g{
+    color: #6351f0;;
+}
+
+.red{
+    color: #a11a1af5;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color: green;
+}
+

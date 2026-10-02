@@ -1,0 +1,31 @@
+body{
+    background-color: cadetblue;
+
+}
+
+h1{
+    text-decoration: underline;
+    color: blue;
+    text-align: center;
+}
+
+p{
+    color: green;
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+    color: navy;
+    font-family: monospace,cursive;
+}
+
+ul{
+    background-color: whitesmoke;
+}
+
+li{
+    color: darkred;
+    font-family: Verdana;
+
+}
+
