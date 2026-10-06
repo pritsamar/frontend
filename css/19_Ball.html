@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: black;
+      }
+
+      .base {
+        background-color: white;
+        width: auto;
+        margin: 0;
+        height: 10vh;
+      }
+
+      .main {
+        background-color: black;
+        width: auto;
+        height: 90vh;
+      }
+      .ball {
+        background-color: gold;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 50%;
+        border: 5px gray groove;
+
+        /* animation-name: bounce;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1s; */
+
+        animation:
+          bounce 5s linear 1s forwards,
+          roll 3s linear 6s forwards;
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+
+        20% {
+          top: 560px;
+          left: 200px;
+          width: 120px;
+        }
+
+        40% {
+          top: 250px;
+          left: 400px;
+          width: 100px;
+        }
+
+        60% {
+          top: 560px;
+          left: 600px;
+          width: 120px;
+        }
+        80% {
+          top: 400px;
+          left: 800px;
+          width: 100px;
+        }
+
+        100% {
+          top: 545px;
+          left: 1000px;
+          width: 100px;
+        }
+      }
+
+      @keyframes roll {
+        0% {
+          transform: rotate(0deg);
+          top: 545px;
+          left: 1000px;
+        }
+
+        100% {
+          top: 545px;
+          left: 1250px;
+          transform: rotate(1000dge);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="ball"></div>
+    </div>
+    <div class="base"></div>
+  </body>
+</html>
