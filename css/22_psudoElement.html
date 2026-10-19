@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <!-- css-pseudo-Element let to select specific part on an elements   -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p::first-line {
+        color: blue;
+      }
+      p::first-letter {
+        font-size: 5rem;
+        font-weight: bold;
+      }
+
+      p::after {
+        content: "<-- Boring";
+        color: purple;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et
+      voluptatum reprehenderit, ducimus voluptas molestias ipsam officiis
+      expedita perspiciatis dolorum omnis explicabo exercitationem veritatis ut
+      quasi. Alias quaerat reiciendis odio modi pariatur eos, repudiandae
+      dolores dolorum aliquam consequatur? Quod voluptatibus exercitationem
+      dicta! A suscipit eligendi consectetur tenetur cumque. Reprehenderit
+      suscipit excepturi officia, beatae adipisci sint repellendus vitae eos
+      tenetur obcaecati dolorem laborum vero modi consequuntur fugit dolorum id
+      necessitatibus libero fugiat nemo impedit in veniam repellat.
+    </p>
+  </body>
+</html>

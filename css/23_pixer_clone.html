@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pixer Animation Studio</title>
+    <style>
+      .story-script-regular {
+        font-family: "Story Script", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: zero;
+        background-color: #fff;
+      }
+
+      @font-face {
+        font-family: myFont;
+        src: url(./fonts/HarryPotter7.ttf.woff);
+      }
+
+      .nav {
+        background-color: #ffff;
+        justify-content: space-between;
+        width: auto;
+        display: flex;
+        margin: 0px 30px;
+        padding: 20px;
+        position: relative;
+        /* height: 200px; */
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: black;
+        font-family: monospace;
+        font-size: 1rem;
+        letter-spacing: 3px;
+      }
+
+      .nav .main_logo {
+        font-family: myFont;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 2.5rem;
+        margin-right: 20px;
+      }
+
+      .option {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .option li {
+        margin-right: 50px;
+      }
+
+      .drop {
+        position: absolute;
+        visibility: hidden;
+        background-color: rgba(50, 50, 50);
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .drop a,
+      .drop li {
+        background-color: rgb(51, 50, 50);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      /* Reveal the dropdown when hovering over the 'films' list item */
+      .films:hover .down1 {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+
+      .tech:hover .down2 {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+
+      .careers:hover .down3 {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(30px);
+      }
+
+      .more:hover .down4 {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-40px);
+      }
+
+      main {
+        /* max-width: 1500px;
+        overflow: hidden; */
+      }
+
+      .show img {
+        width: 100vw;
+        height: auto;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: #e5e5e5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: #111111;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      footer {
+        width: 100%;
+      }
+
+      /* ==========================================
+       TOP SECTION (Light Grey Background)
+    ========================================== */
+      .footer-top {
+        background-color: #f4f4f4;
+        padding: 60px 40px 70px;
+      }
+
+      .footer-top-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      /* Social Media Icons */
+      .social-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding-top: 4px;
+      }
+
+      .social-icon {
+        color: #000000;
+        font-size: 20px;
+        text-decoration: none;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-emphasis: center;
+      }
+
+      .social-icon:hover {
+        opacity: 0.6;
+        transform: translateY(-1px);
+      }
+
+      /* Navigation Grid / Columns */
+      .nav-columns {
+        display: flex;
+        gap: 60px;
+      }
+
+      .nav-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .column-title {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 16px;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .nav-link {
+        color: #222222;
+        font-size: 13.5px;
+        text-decoration: none;
+        line-height: 1.4;
+        transition: color 0.15s ease;
+      }
+
+      .nav-link:hover {
+        color: #777777;
+      }
+      /* bottom white */
+      .footer-bottom {
+        background-color: #ffffff;
+        padding: 32px 20px 40px;
+        text-align: center;
+      }
+
+      .footer-bottom-container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .privacy-choice-link {
+        color: #111111;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .privacy-choice-link:hover {
+        text-decoration: underline;
+      }
+
+      .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        color: #222222;
+      }
+
+      .legal-link {
+        color: #111111;
+        text-decoration: none;
+      }
+
+      .legal-link:hover {
+        text-decoration: underline;
+      }
+
+      .separator {
+        color: #222222;
+        font-weight: 300;
+      }
+
+      .copyright {
+        font-size: 11px;
+        color: #222222;
+        margin-top: 2px;
+      }
+
+      .grid1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        padding: 100px;
+        border: 3px #222222 solid;
+      }
+
+      .box {
+        max-width: 80wh;
+      }
+
+      .box1 {
+        grid-row: 1/2;
+        grid-column: 1/4;
+      }
+      .box img {
+        max-width: 80vw;
+      }
+      .box2 {
+        grid-row: 2/3;
+        grid-column: 1/4;
+      }
+      .box3 img,
+      .box4 img,
+      .box5 img {
+        width: 350px;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div><a class="main_logo" href="#">PIXAR</a></div>
+      <ul class="option">
+        <li class="films">
+          <a href="#">FILMS</a>
+          <ul class="drop down1">
+            <li><a href="#">FEATURE FILMS</a></li>
+            <li><a href="#">SHORT FILMS</a></li>
+            <li><a href="#">SERIES</a></li>
+            <li><a href="#">SPARKSHORTS</a></li>
+            <li><a href="#">DOCUMENTRIES</a></li>
+          </ul>
+        </li>
+        <li class="tech">
+          <a href="#">TECHNOLOGY</a>
+          <ul class="drop down2">
+            <li><a href="#">TECHNOLOGY AT PIXAR </a></li>
+            <li><a href="#">RENDERMAN</a></li>
+            <li><a href="#">OPENUSD</a></li>
+            <li><a href="#">SOFTWARE R&D</a></li>
+            <li>
+              <a href="#">TECHNOLOGY LIBRARIES</a>
+            </li>
+          </ul>
+        </li>
+        <li class="careers">
+          <a href="#">CAREERS</a>
+          <ul class="drop down3">
+            <li><a href="#">CAREERS </a></li>
+            <li><a href="#">INTERNSHIPS</a></li>
+            <li><a href="#">LIFE AT PIXAR</a></li>
+          </ul>
+        </li>
+        <li class="more">
+          <a href="#">MORE</a>
+          <ul class="drop down4">
+            <li><a href="#">LEADERS </a></li>
+            <li><a href="#">OUR STORY</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">PIXAR IN A BOX</a></li>
+            <li><a href="#">COMPANY FAQ'S</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="show">
+        <img src="img/toyStory5.png" alt="toy story 5" />
+      </div>
+
+      <div class="grid1">
+        <div class="box box1"><img src="./img/gatto.png" alt="" /></div>
+        <div class="box box2"><img src="./img/gatto.png" alt="" /></div>
+        <div class="box box3"><img src="./img/dory.png" alt="" /></div>
+        <div class="box box4"><img src="./img/ghostmaket.png" alt="" /></div>
+        <div class="box box4"><img src="./img/dory.png" alt="" /></div>
+      </div>
+
+      <!-- <div class="continer">
+        <div class="box">
+          <img src="./img/studio1.jpg" alt="" />
+        </div>
+        <div class="box"><img src="./img/studio1.jpg" alt="" /></div>
+        <div class="box"><img src="./img/studio1.jpg" alt="" /></div>
+
+        <div class="studio"></div>
+
+        <div class="hit_movie">
+          <a href="#">
+            <img src="./img/hit_movies.png" alt="" />
+            <img src="./img/hit_movies.png" alt="" />
+            <img src="./img/hit_movies.png" alt="" />
+          </a>
+        </div>
+      </div> -->
+    </main>
+
+    <footer>
+      <!-- Top Section (Light Grey Background) -->
+      <div class="footer-top">
+        <div class="footer-top-container">
+          <!-- Social Media Icons (Left Side) -->
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+
+          <!-- Navigation Columns (Right Side) -->
+          <div class="nav-columns">
+            <!-- FILMS Column -->
+            <div class="nav-column">
+              <h3 class="column-title">FILMS</h3>
+              <ul class="nav-list">
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Shorts</a></li>
+                <li><a href="#" class="nav-link">Series</a></li>
+                <li><a href="#" class="nav-link">SparkShorts</a></li>
+                <li><a href="#" class="nav-link">Documentaries</a></li>
+              </ul>
+            </div>
+
+            <!-- TECH Column -->
+            <div class="nav-column">
+              <h3 class="column-title">TECH</h3>
+              <ul class="nav-list">
+                <li><a href="#" class="nav-link">Tech at Pixar</a></li>
+                <li><a href="#" class="nav-link">RenderMan</a></li>
+                <li><a href="#" class="nav-link">OpenUSD</a></li>
+                <li><a href="#" class="nav-link">Software R&amp;D</a></li>
+                <li><a href="#" class="nav-link">Libraries</a></li>
+              </ul>
+            </div>
+
+            <!-- CAREERS Column -->
+            <div class="nav-column">
+              <h3 class="column-title">CAREERS</h3>
+              <ul class="nav-list">
+                <li><a href="#" class="nav-link">Careers At Pixar</a></li>
+                <li><a href="#" class="nav-link">Internships</a></li>
+                <li><a href="#" class="nav-link">Life At Pixar</a></li>
+              </ul>
+            </div>
+
+            <!-- MORE Column -->
+            <div class="nav-column">
+              <h3 class="column-title">MORE</h3>
+              <ul class="nav-list">
+                <li><a href="#" class="nav-link">Leaders</a></li>
+                <li><a href="#" class="nav-link">Our Story</a></li>
+                <li><a href="#" class="nav-link">Events</a></li>
+                <li><a href="#" class="nav-link">Pixar In A Box</a></li>
+                <li><a href="#" class="nav-link">FAQ’s</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section (White Background) -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <!-- Privacy Choice Link -->
+          <div>
+            <a href="#" class="privacy-choice-link">Your Privacy Choices</a>
+          </div>
+
+          <!-- Pipe '|' Separated Privacy Links -->
+          <div class="legal-links">
+            <a href="#" class="legal-link">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="#" class="legal-link">Your US State Privacy Rights</a>
+            <span class="separator">|</span>
+            <a href="#" class="legal-link">Children's Online Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="#" class="legal-link">Interest Based Ads</a>
+            <span class="separator">|</span>
+          </div>
+
+          <!-- Copyright Line -->
+          <div class="copyright">© 1986-2026 Disney-Pixar</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

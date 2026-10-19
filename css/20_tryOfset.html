@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curved Ball Animation</title>
+
+    <style>
+      .scene {
+        position: relative;
+        width: 300px;
+        height: 180px;
+        margin: 50px auto;
+        border-bottom: 2px solid #444;
+      }
+
+      .ball {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: royalblue;
+
+        offset-path: path(
+          "M 15 145 C 70 145, 75 20, 150 20 C 225 20, 230 145, 285 145"
+        );
+        offset-distance: 0%;
+        animation: bounce 2s ease-in-out 1;
+
+        offset-path: path("M 285 145 C 230 145");
+        animation: bounce 2s ease-in-out 2s 1;
+      }
+
+      @keyframes bounce {
+        to {
+          offset-distance: 100%;
+        }
+      }
+
+      @keyframes bounc2 {
+        to {
+          offset-distance: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="scene">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
