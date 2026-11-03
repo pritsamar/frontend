@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden; /* Locks the outer page */
+      font-family: sans-serif;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 10fr;
+      grid-template-rows: 100px calc(100vh - 100px);
+    }
+
+    .navbar {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 100px;
+      padding-right: 50px;
+    }
+
+    .aside {
+      height: 90vh;
+      background-color: rgb(48, 47, 47);
+      text-decoration: none;
+      color: white;
+      display: fixed;
+      font-size: 2rem;
+    }
+
+    .aside li {
+      padding: 10px 5px;
+    }
+
+    .main {
+      overflow-y: scroll;
+      padding-left: 40px;
+      font-size: 1.5rem;
+    }
+
+    .more_height {
+      min-height: 1000px;
+    }
+
+    .main h1 {
+      color: blue;
+      font-size: 5rem;
+      padding-bottom: 40px;
+    }
+
+    .main div {
+      margin-top: 10px;
+    }
+
+    .main li {
+      margin: 10px 10px;
+    }
+  </style>
+
+  <body>
+    <div class="grid">
+      <nav class="navbar">
+        <h1>My Learning Portal</h1>
+        <h2>Welcome Students</h2>
+      </nav>
+
+      <aside class="aside">
+        <ul>
+          <li><a href=""></a>Dashboard</li>
+          <li><a href=""></a>Course</li>
+          <li><a href=""></a>Assignment</li>
+          <li><a href=""></a>Notes</li>
+          <li><a href=""></a>Quizzes</li>
+          <li><a href=""></a>Progress</li>
+          <li><a href=""></a>Setting</li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="more_height">
+          <h1>Welcome to the learning Portal</h1>
+          <p>
+            This portal helps you access your courses, track your progress and
+            stay updated with new content and assignments
+          </p>
+
+          <div class="para2">
+            <h1>Today's Highlights</h1>
+            <ul>
+              <li>JavaScript DOM workshop at 5 pm</li>
+              <li>Assignment on "if-eles condition" due by tonight</li>
+
+              <li>New notes added under the react course</li>
+            </ul>
+          </div>
+
+          <div class="announce">
+            <h1>Announcements</h1>
+            <p>
+              Quiz scheduled on Friday for HTML and CSS please revise the first
+              two modules nad ensure your profiles are updated
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
